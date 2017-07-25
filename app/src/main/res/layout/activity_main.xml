@@ -1,0 +1,68 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appdrawer_drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- The main content view -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!-- The navigation drawer -->
+    <ListView android:id="@+id/appdrawerlistview"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#BBCC00"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="0dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/sqlliteinsertuname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:hint="USERNAMEE"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/sqlliteinsertpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sqlliteinsertuname"
+            android:layout_alignStart="@+id/sqlliteinsertuname"
+            android:layout_below="@+id/sqlliteinsertuname"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="PASSWORD"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/sqlliteinsertbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sqlliteinsertadduser"
+            android:layout_marginTop="51dp"
+            android:text="ADD USER"
+            android:layout_below="@+id/sqlliteinsertpass"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/sqlliteinsertviewdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="61dp"
+            android:text="VIEW ALL DETAILS"
+            android:onClick="sqlliteinsertshowdetails"
+            android:layout_below="@+id/sqlliteinsertbtn"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
